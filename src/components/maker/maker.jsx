@@ -13,7 +13,7 @@ const Maker = ({ authService }) => {
       id: '1',
       name: 'ellie',
       company: 'Samsung',
-      theme: 'light',
+      theme: 'dark',
       title: 'Software Engineer',
       email: 'ckdwls2525@naver.com',
       message: 'go for it',
@@ -24,7 +24,7 @@ const Maker = ({ authService }) => {
       id: '2',
       name: 'spearjin',
       company: '기아',
-      theme: 'light',
+      theme: 'colorful',
       title: 'Software Engineer',
       email: 'spear2525@naver.com',
       message: 'go for it',
@@ -40,7 +40,7 @@ const Maker = ({ authService }) => {
       email: 'yumin2525@naver.com',
       message: 'go for it',
       fileName: 'yumin',
-      fileURL: 'yumin.png',
+      fileURL: null,
     },
   ]);
 
