@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../button/button';
-import ImageFileInput from '../image_file_input.jsx/image_file_input';
+import ImageFileInput from '../image_file_input/image_file_input';
 import styles from './card_edit_form.module.css';
 
 const CardEditForm = ({ card }) => {
