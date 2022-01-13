@@ -7,7 +7,7 @@ import Header from '../header/header';
 import styles from './maker.module.css';
 import Editor from '../editor/editor';
 
-const Maker = ({ authService }) => {
+const Maker = ({ FileInput, authService }) => {
   const [cards, setCards] = useState({
     1: {
       id: '1',
@@ -66,6 +66,7 @@ const Maker = ({ authService }) => {
       updated[card.id] = card;
       return updated;
     });
+    // 업데이트 하는 state가 오래된 것일 수도 잇어서 다음같이 하는게 안정적이다
   };
   // 기존의 배열로 해도 되지만 배열의 길이가 많아지면 아무래도 효율성이 떨어진다
 
@@ -81,7 +82,13 @@ const Maker = ({ authService }) => {
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor cards={cards} addCard={CreateOrUpdateCard} updateCard={CreateOrUpdateCard} deleteCard={deleteCard} />
+        <Editor
+          FileInput={FileInput}
+          cards={cards}
+          addCard={CreateOrUpdateCard}
+          updateCard={CreateOrUpdateCard}
+          deleteCard={deleteCard}
+        />
         <Preview cards={cards} />
       </div>
       <Footer />
